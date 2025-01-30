@@ -10,31 +10,41 @@ This study investigates the literary styles of Ferando Pessoa and his heteronyms
 ### A Little Larger than the Entire Universe
 The data consisted of several corpora of poetry. For poems written by Pessoa, the majority of them are scraped from a collection of Pessoa's works by Richard Zenith called ‘A Little Larger Than the Entire Universe’ from [archive.org]([url](https://archive.org/details/fernando-pessoa-a-little-larger-than-the-entire-universe-selected-poems-penguin-classics-2006/Fernando%20Pessoa%20A%20Little%20Larger%20Than%20the%20Entire%20Universe%20Selected%20Poems%20Penguin%20Classics%202006/
 ) using the PyPDF module for python. This resulted in 77 poems by Pessoa, 52 by Caeiro, 56 by Reis and 41 by Campos.
+#### CSV key
+| Index | Formatted_text | Cleaned_text | Tokenized_text | Heteronym |
+| ----- | -------------- | ------------ | -------------- | --------- |
+| The poem's index within its heteronym's corpus. NOTE: When joining poems which span across multiple pages, the order of the poems within their corpora may have been changed, and thus, might not align with the order in which they are presented in the book. | The poem with all excess whitespace and line-breaks removed, but the original puntcuation still included. | The poem with all whitespace, line-breaks and punctuation removed. | The tokenized poem with all punctuation and stopwords removed. | The name of the heteronym to whom the poem is attributed. |
 
 ### 35 Sonnets and English Poems vol.1 & 2
 Also included in the main corpus are the poems included in Pessoa's "35 Sonnets" collection, and 27 poems from the "English Poems" collection. These poems were sourced from Project Gutenberg as .txt files, and cleaned using python regular expressions.
 
 ### Whitman
+W
 
 ### Lovecraft
+As a distractor corpus, 48 poems by American author H. P. Lovecraft were selected. These poems were scraped from https://www.hplovecraft.com/writings/texts/ using ScraPy and BeautifulSoup, as part of a previous project, and were thus chosen to be used as a distractor corpus.
 
 ### Owens
+Finally, the distractor corpus was completed with 25 poems by British author Wilfred Owens. These poems were manually copied from "Poems by Wilfred Owen", provided by Project Gutenberg, also as part of a previous project.
 
 ## Structure 
 This repository contains various files, these include:
 - 
 
-### CSV key
-| Index | Formatted_text | Cleaned_text | Tokenized_text | Heteronym |
-| ----- | -------------- | ------------ | -------------- | --------- |
-| The poem's index within its heteronym's corpus. NOTE: When joining poems which span across multiple pages, the order of the poems within their corpora may have been changed, and thus, might not align with the order in which they are presented in the book. | The poem with all excess whitespace and line-breaks removed, but the original puntcuation still included. | The poem with all whitespace, line-breaks and punctuation removed. | The tokenized poem with all punctuation and stopwords removed. | The name of the heteronym to whom the poem is attributed. |
-
 ## How to use
+In order to access this repository, you will need software that is able to run Jupyter Notebook (or .ipnyb) files. You will also need to ensure that the following python modules are installed, in order for the code to run properly:
+- re
+- pypdf
+- pandas
+- os
+- nltk
+
+Thirdly, it is advised to install R to use the Stylo package for stylometry.
 
 ## Intended use of this repository
 
 ## Licenses
-Pessoa's poetry falls under the public domain, and is thus free to be used for our research.
+Each poet's works used in this project falls under the public domain, and is thus free to be used for our research.
 
 ## Collaborators
   This repository was created by Gheorghe Septelici, Henry Hornung and Aidan Grefte.  
