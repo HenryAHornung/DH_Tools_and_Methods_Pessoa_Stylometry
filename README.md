@@ -4,25 +4,25 @@
 
 #### How can computational methods describe the Pessoa-Whitman connection?
 
-This study investigates the literary styles of Ferando Pessoa and his heteronyms, in order to determine to what extent they reflect the strong influence that Walt Whitman is theorized to have had on Pessoa. The research was conducted in two parts, both relying on stylometry. Firstly, a corpus consisting of poems released under Pessoa's orthynomous self and his heteronyms, Alberto Caeiro , Ricardo Reis and Alvaro de Campos were scraped from a compilation of his works. These were then subjected to a cluster analysis using the Stylo package in R, which included a corpus of poems by Walt Whitman, and distractor corpus of H. P. Lovecraft's and Wilfred Owen's poetry. The purpose of this was to identify 
+This study investigates the literary styles of Ferando Pessoa and his heteronyms, in order to determine to what extent they reflect the strong influence that Walt Whitman is theorized to have had on Pessoa. The research was conducted in two parts, both relying on stylometry. Firstly, a corpus consisting of poems released under Pessoa's orthynomous self and his heteronyms, Alberto Caeiro , Ricardo Reis and Alvaro de Campos were scraped from a compilation of his works. These were then subjected to a cluster analysis using the Stylo package in R, which included a corpus of poems by Walt Whitman, and distractor corpus of H. P. Lovecraft's and Wilfred Owen's poetry. The purpose of this was to identify how stylistically similar Whitan's Poetry is to Pessoa's in comparison to an arbitrarily selected corpus. Secondly, each heteronym, (except for Reis, as his corpus contained too few words for this step) was individually compared to Whitman's corpus using Stylo's oppose function. The heteronyms/orthonym were compared to each other, with Whitman's corpus being used as a test set to find overlap between the words being used by each corpus.
 
 ## Data
-a corpus consisting of poems released under Pessoa's orthynomous self (77 poems) and his heteronyms, Alberto Caeiro (52 poems), Ricardo Reis (56) and Alvaro de Campos (41 poems)
+### A Little Larger than the Entire Universe
+The data consisted of several corpora of poetry. For poems written by Pessoa, the majority of them are scraped from a collection of Pessoa's works by Richard Zenith called ‘A Little Larger Than the Entire Universe’ from [archive.org]([url](https://archive.org/details/fernando-pessoa-a-little-larger-than-the-entire-universe-selected-poems-penguin-classics-2006/Fernando%20Pessoa%20A%20Little%20Larger%20Than%20the%20Entire%20Universe%20Selected%20Poems%20Penguin%20Classics%202006/
+) using the PyPDF module for python. This resulted in 77 poems by Pessoa, 52 by Caeiro, 56 by Reis and 41 by Campos.
 
-The corpus this we are using a selection created by Richard Zenith called ‘A Little Larger Than the Entire Universe’ from archive.org. This book contains many poems that had never been translated before, many of them coming from Zenith translating the original manuscript. However, some of the works in this book were never published by Pessoa himself, which may mean he never wanted them to be a part of this heteronyms oeuvre. Regardless, the selection will still serve as a useful database for our research.
+### 35 Sonnets and English Poems vol.1 & 2
+Also included in the main corpus are the poems included in Pessoa's "35 Sonnets" collection, and 27 poems from the "English Poems" collection. These poems were sourced from Project Gutenberg as .txt files, and cleaned using python regular expressions.
 
-https://archive.org/details/fernando-pessoa-a-little-larger-than-the-entire-universe-selected-poems-penguin-classics-2006/Fernando%20Pessoa%20A%20Little%20Larger%20Than%20the%20Entire%20Universe%20Selected%20Poems%20Penguin%20Classics%202006/
+### Whitman
+
+### Lovecraft
+
+### Owens
 
 ## Structure 
 This repository contains various files, these include:
-
-### step 1: stylometry with distractors.
-- Corpora broken down into six parts.
-
-### step 2: opposing whitman to each of Pessoa's heteronyms.
-- Reis removed from selection, since his corpus is too small.
-- The first test didn't reveal particularly similar styles between any of the heteronyms and whitman, so we need to take a closer look at how they differ.
-
+- 
 
 ### CSV key
 | Index | Formatted_text | Cleaned_text | Tokenized_text | Heteronym |
