@@ -23,13 +23,27 @@ The main body of text that we will be comparing the stylistic similarity of Pess
 
 #### Lovecraft
 As a distractor corpus, 48 poems by American author H. P. Lovecraft were selected. These poems were scraped from https://www.hplovecraft.com/writings/texts/ using ScraPy and BeautifulSoup, as part of a previous project, and were thus chosen to be used as a distractor corpus.
+##### CSV key
+||Title|Text_Original|Text_Continuous|Link|
+|---|---|---|---|---|
+|Contains the poem/row count.|Contains the title of the poem.|Contains the poem itself, in its original form.|Contains the poem itself, with all indents and line breaks removed.|Contains the hyperlink to the page that the poem was scraped from.|
 
 #### Owen
 Finally, the distractor corpus was completed with 25 poems by British author Wilfred Owens. These poems were manually copied from "Poems by Wilfred Owen", provided by Project Gutenberg, also as part of a previous project.
 
 ### Structure 
 This repository contains various files, these include:
-
+- pessoa.pdf (A PDF edition of "A Little Larger Than the Entire Universe")
+- Pessoa_Heteronyms_Scraping.ipynb (Jupyter notebook containing the code for scraping the corpus)
+- README.md (ReadMe)
+- Stylo.zip (Compressed folder containing the outputs of the stylo analysis, and the joined .txt files that were used in producing them)
+- T&M Group Report.pdf (The research report)
+- pessoa_heteronyms_full_corpus.csv (The main Pessoa corpus, exported as .csv)
+- Caeiro (Directory containing the Caeiro corpus)
+- Campos (Directory containing the Campos corpus)
+- Distractor_Corpus (Directory containing the entire distractor corpus, csv of the Lovecraft corpus, and jupyter notebook containing the code used to scrape the Lovecraft corpus)
+- Pessoa (Directory containing the Pessoa corpus. Including the scraped poems from "A Little Larger than the Entire Universe", 35 Sonnets and English Poems vol. 1&2)
+- Reis (Directory containing the Reis corpus)
 
 ### How to use
 In order to access this repository, you will need software that is able to run Jupyter Notebook (or .ipnyb) files. You will also need to ensure that the following Python modules are installed, in order for the code to run properly:
